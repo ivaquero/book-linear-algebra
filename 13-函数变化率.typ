@@ -1,4 +1,4 @@
-#import "@local/qooklet:0.1.0": *
+#import "@preview/qooklet:0.1.1": *
 #show: doc => conf(
   title: "函数变化率",
   author: "Yāng Xīnbīn",
