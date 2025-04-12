@@ -1,12 +1,11 @@
 #import "@preview/qooklet:0.2.0": *
-#show: doc => conf(
+#show: qooklet.with(
   title: "几何变换",
   author: "Yāng Xīnbīn",
   footer-cap: "Yāng Xīnbīn",
   header-cap: "极简线性代数",
   lang: "zh",
   outline-on: true,
-  doc,
 )
 
 = 仿射变换

@@ -1,12 +1,11 @@
 #import "@preview/qooklet:0.2.0": *
-#show: doc => conf(
+#show: qooklet.with(
   title: "矩阵的秩",
   author: "Yāng Xīnbīn",
   footer-cap: "Yāng Xīnbīn",
   header-cap: "极简线性代数",
   lang: "zh",
   outline-on: true,
-  doc,
 )
 
 = 四个子空间
