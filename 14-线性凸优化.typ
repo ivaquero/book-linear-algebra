@@ -1,4 +1,4 @@
-#import "@preview/qooklet:0.1.1": *
+#import "@preview/qooklet:0.2.0": *
 #show: doc => conf(
   title: "线性凸优化",
   author: "Yāng Xīnbīn",
