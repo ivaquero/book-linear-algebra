@@ -139,8 +139,6 @@ $
   0, …, …, b_n, a_n)
 $
 
-#pagebreak()
-
 LU 因子化，得
 
 $
@@ -204,8 +202,6 @@ $ 𝑨 = (𝜦 𝑹)^(⊤)(𝜦 𝑹) $
 #tip[
   Cholesky 分解主要用于计算协方差矩阵。
 ]
-
-#pagebreak()
 
 = QR 分解
 <QR-分解>
@@ -389,14 +385,9 @@ $ norm(𝑨)_* = ∑_(i=1)^(min{m, n}) σ_i $
 
 = 总结
 
+#let data = csv("data/mat-decomp.csv")
 #figure(
-  xlsx-parser(
-    read("data/matrix.xlsx", encoding: none),
-    parse-table-style: false,
-    parse-stroke: false,
-    stroke: three-line(rgb("000")),
-    sheet-index: 2,
-  ),
+  ktable(data, 4),
   caption: "常见矩阵分解",
   supplement: "表",
   kind: table,

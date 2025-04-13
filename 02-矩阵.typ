@@ -68,7 +68,6 @@ $
 
 $ 𝒃 = mat(delim: "[", b_1; b_2; ⋮; b_m) $
 
-#pagebreak()
 当将常数向量$𝒃$与系数矩阵$𝑨$纵向堆叠时，得到矩阵
 
 $
@@ -116,13 +115,9 @@ $
   𝑨 -𝑩 &= 𝑨 + (-𝑩)
 $
 
+#let data = csv("data/vec-add.csv")
 #figure(
-  xlsx-parser(
-    read("data/matrix.xlsx", encoding: none),
-    parse-table-style: false,
-    parse-stroke: false,
-    stroke: three-line(rgb("000")),
-  ),
+  ktable(data, 4),
   caption: "矩阵初等运算",
   supplement: "表",
   kind: table,
@@ -141,8 +136,6 @@ $
 #definition[
   若一个矩阵可以通过有限次初等行运算从另一个矩阵中得到，则称为行等价（row equivalent）。
 ]
-
-#pagebreak()
 
 = 矩阵化简
 <矩阵化简>

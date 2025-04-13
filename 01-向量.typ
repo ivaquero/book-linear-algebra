@@ -84,7 +84,7 @@ $
 ]
 
 #figure(
-  image("images/vec-add.png", width: 40%),
+  image("images/vec-add.png", width: 30%),
   caption: "向量加法",
   supplement: "图",
 )
@@ -93,13 +93,9 @@ $
 
 $ c 𝒗 = vec(c v_1, c v_2) $
 
+#let data = csv("data/vec-add.csv")
 #figure(
-  xlsx-parser(
-    read("data/matrix.xlsx", encoding: none),
-    parse-table-style: false,
-    parse-stroke: false,
-    stroke: three-line(rgb("000")),
-  ),
+  ktable(data, 4),
   caption: "向量的和",
   supplement: "表",
   kind: table,
@@ -168,20 +164,13 @@ $ 𝒂 ⊗ 𝒃 = mat(delim: "[", a_1b_1, a_1b_2; a_2b_1, a_2b_2) $
 
 == 运算律
 
+#let data = csv("data/vec-prod.csv")
 #figure(
-  xlsx-parser(
-    read("data/matrix.xlsx", encoding: none),
-    parse-table-style: false,
-    parse-stroke: false,
-    stroke: three-line(rgb("000")),
-    sheet-index: 1,
-  ),
+  ktable(data, 5),
   caption: "向量的积",
   supplement: "表",
   kind: table,
 )
-
-#pagebreak()
 
 = 向量范数
 <向量范数>
