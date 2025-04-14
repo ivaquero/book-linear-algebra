@@ -154,7 +154,7 @@ $ mdet( a_11, a_12, a_13; a_21, a_22, a_23; a_31, a_32, a_33) $
 == Laplace 展开
 <Laplace-展开>
 
-#theorem("Laplace 展开")[
+#theorem(title: "Laplace 展开")[
   $n$阶方阵$𝑨 = (a_(i j))$的行列式，可表示成该方阵的某一行（列）各元素与其对应的代数余子式乘积之和，即
 
   $ |𝑨| = ∑_(j=1)^n a_(i j) 𝑨_(i j) $

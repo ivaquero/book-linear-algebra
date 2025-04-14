@@ -322,7 +322,7 @@ $ div arrow(𝒇) = pdv(𝒙, 𝒙) + pdv(𝒚, 𝒚) $
 
 得到的标量称为散度，表示发散的程度，是物理中通量的局部描述，是通量的体密度。
 
-#theorem("Gauss 公式")[
+#theorem(title: "Gauss 公式")[
   $
     underbrace(∯_(a V) arrow(𝒇)⋅arrow(𝒏) dd(S), ctext("流过边界的通量")) = underbrace(∭_V div arrow(𝒇) dd(V), ctext("内部所有散度的贡献"))
   $
@@ -340,7 +340,7 @@ $
 $
 得到的向量称为旋度（curl），其方向服从右手法则，是物理中环量的局部描述，是环量的面密度。
 
-#theorem("Stokes 公式")[
+#theorem(title: "Stokes 公式")[
   $
     underbrace(∮_(a S) arrow(𝒇)⋅dd(𝒓), ctext("环绕边界的环量")) = underbrace(∬_S curl arrow(𝒇)⋅dd(S), ctext("曲目上旋度的贡献"))
   $
