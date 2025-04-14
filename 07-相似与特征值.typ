@@ -80,7 +80,7 @@
   - $𝑨^(⊤) ∼ 𝑩^(⊤)$
 ]
 
-#theorem(title: "传递性")[
+#theorem("传递性")[
   若$𝑨 ∼ 𝑩$，且$𝑩 ∼ 𝑪$，则
   $ 𝑨 ∼ 𝑪 $
 
@@ -334,7 +334,7 @@ $
 
 = Cayley-Hamilton 定理
 
-#theorem(title: "Cayley-Hamilton 定理")[
+#theorem("Cayley-Hamilton 定理")[
   若$n$阶方阵$𝑨$的特性多项式为
   $ f(λ) = |λ 𝑬 - 𝑨| = (-1)^n λ^n + ∑_0^(n-1) c_i λ^i $
 

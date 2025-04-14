@@ -71,7 +71,7 @@ $ ⟨x, y⟩ := 𝒙^(⊤) 𝑨 𝒚 $
   矩阵正定 ⇔ 矩阵的特征值均 > 0
 ]
 
-#theorem(title: "Hurwitz 定理")[
+#theorem("Hurwitz 定理")[
   已知二次型$f(x) = 𝒙^(⊤) 𝑨 𝒙$，其为正定的充要条件为，$𝑨$的各阶主子式均为正，即
 
   $
@@ -104,7 +104,7 @@ $ ⟨x, y⟩ := 𝒙^(⊤) 𝑨 𝒚 $
 
 ]
 
-#theorem(title: "传递性")[
+#theorem("传递性")[
   若$𝑨 ≃ 𝑩$，且$𝑩 ≃ 𝑪$，则
   $ 𝑨 ≃ 𝑪 $
 
@@ -116,7 +116,7 @@ $ ⟨x, y⟩ := 𝒙^(⊤) 𝑨 𝒚 $
 
 由合同的性质，可证明 Sylvester's 惯性定理。
 
-#theorem(title: "Sylvester's 惯性定理")[
+#theorem("Sylvester's 惯性定理")[
 
   对于某二次型$f$，可化为多个标准型。其以下指标都相同
 
@@ -131,7 +131,7 @@ $ ⟨x, y⟩ := 𝒙^(⊤) 𝑨 𝒚 $
 == Lagrange 配方法
 <Lagrange-配方法>
 
-#theorem(title: "Lagrange 配方法")[
+#theorem("Lagrange 配方法")[
   + 遇到平方项$x_i^2$，先对其进行配方
   + 遇到交叉项$x_i x_j$，且没有对应平方项，进行换元
 
