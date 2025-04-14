@@ -70,8 +70,6 @@ $
   indent: 1.2em,
 )
 
-#pagebreak()
-
 由此，可得方程
 
 $

@@ -70,8 +70,6 @@ $ cases(delim: "{", x = x_0 + t X, y = y_0 + t Y, z = z_0 + t Z) $
 
 $ frac(x - x_0, x) = frac(y - y_0, y) = frac(z - z_0, Z) $
 
-#pagebreak()
-
 - 两点方程
 
 $

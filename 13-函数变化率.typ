@@ -50,8 +50,6 @@ $
   "average rates of change" & ⇒ & "instantaneous rate of change"
 $
 
-#pagebreak()
-
 === 非指数型导数
 推导可使用矩形面积变化，即给边长赋予相应的值，如$x sin(x)$
 
