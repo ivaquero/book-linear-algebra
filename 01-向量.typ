@@ -1,4 +1,4 @@
-#import "@preview/qooklet:0.2.0": *
+#import "lib/lib.typ": *
 #show: qooklet.with(
   title: "向量",
   author: "Yāng Xīnbīn",
@@ -145,10 +145,10 @@ $ 𝒂 × 𝒃 = norm(𝒂)norm(𝒃) sin θ $
 $
   𝒂 × 𝒃 &=
   mdet(
-𝒊, 𝒋, 𝒌;
-x_1, y_1, z_1;
-x_2, y_2, z_2
-) \ &=
+    𝒊, 𝒋, 𝒌;
+    x_1, y_1, z_1;
+    x_2, y_2, z_2
+  ) \ &=
   (y_1 z_2 - y_2 z_1)𝒊 -
   (x_1 z_2 - x_2 z_1)𝒋 +
   (x_1 y_2 - x_2 y_1)𝒌

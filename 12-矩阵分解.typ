@@ -1,4 +1,4 @@
-#import "@preview/qooklet:0.2.0": *
+#import "lib/lib.typ": *
 #show: qooklet.with(
   title: "矩阵分解",
   author: "Yāng Xīnbīn",
@@ -109,7 +109,7 @@ LU 分解的存在性是有条件的：
 
   则为置换矩阵（permutation matrix）
 
-  $n$阶方阵的置换矩阵有$(n/1) = n!$个。
+  $n$阶方阵的置换矩阵有$(n / 1) = n!$个。
 ]
 
 #theorem[
@@ -129,29 +129,37 @@ LU 分解的存在性是有条件的：
 对矩阵
 
 $
-  𝑨 = mat(delim: "[",
-  a_1, c_1, 0, …, 0;
-  b_2, a_2, c_2, …, ⋮;
-  0, b_3, a_3, ⋱, ⋮;
-  ⋮, 0, ⋱, ⋱, c_(n -1);
-  0, …, …, b_n, a_n)
+  𝑨 = mat(
+    delim: "[",
+    a_1, c_1, 0, …, 0;
+    b_2, a_2, c_2, …, ⋮;
+    0, b_3, a_3, ⋱, ⋮;
+    ⋮, 0, ⋱, ⋱, c_(n -1);
+    0, …, …, b_n, a_n
+  )
 $
 
 LU 因子化，得
 
 $
-  mat(delim: "[", a_1, c_1;
-  b_2, a_2, c_2;
-  med, b_3, a_3, c_3;
-  med, med, ⋱, ⋱, ⋱) =
-  mat(delim: "[", l_11;
-  l_21, l_22;
-  med, l_32, l_33;
-  med, med, ⋱, ⋱)
-  mat(delim: "[", u_11, u_12;
-  med, u_22, u_23;
-  med, med, u_33, u_34;
-  med, med, med, ⋱, ⋱)
+  mat(
+    delim: "[", a_1, c_1;
+    b_2, a_2, c_2;
+    med, b_3, a_3, c_3;
+    med, med, ⋱, ⋱, ⋱
+  ) =
+  mat(
+    delim: "[", l_11;
+    l_21, l_22;
+    med, l_32, l_33;
+    med, med, ⋱, ⋱
+  )
+  mat(
+    delim: "[", u_11, u_12;
+    med, u_22, u_23;
+    med, med, u_33, u_34;
+    med, med, med, ⋱, ⋱
+  )
 $
 
 #theorem[
@@ -172,7 +180,7 @@ $
   其中，$𝑹$为上三角矩阵，且主对角元均 > $0$。这被称为 Cholesky 分解。
 ]
 
-因为避免了计算$𝑳$，翻转计数大约是通常 LU 计数的一半。换句话说，当使用 Cholesky 分解时翻转计数约为$O(1/2 n^3)$，而 LU 变换的总运算量应为$O(frac(n!, 3))$。
+因为避免了计算$𝑳$，翻转计数大约是通常 LU 计数的一半。换句话说，当使用 Cholesky 分解时翻转计数约为$O(1 / 2 n^3)$，而 LU 变换的总运算量应为$O(frac(n!, 3))$。
 
 除了减少的翻转数，正定阵总是非奇异的。且可在不必使用主元的情况下分解。但不可避免的是，矩阵病态的可能性，这取决于对角元的相对值。
 
@@ -220,7 +228,7 @@ $ 𝑨 = 𝑸 𝑹 $
 ]
 
 #theorem("Schur 定理")[
-  设$V$是一个有限维复数向量空间，且$T ∈ cal(L)(V)$，则$T $相对于$V$的某个规范正交基有一个上三角矩阵。
+  设$V$是一个有限维复数向量空间，且$T ∈ cal(L)(V)$，则$T$相对于$V$的某个规范正交基有一个上三角矩阵。
 ]
 
 = 特征值分解
@@ -243,10 +251,12 @@ $ 𝑨 = 𝑺 𝜦 𝑺^(-1) $
 
 $
   𝑨 = [𝒙_1 𝒙_2 … 𝒙_n]
-  mat(delim: "[", λ_1, med, med, ;
-med, λ_2, med, ;
-med, med, ⋱, ;
-med, med, med, λ_n)
+  mat(
+    delim: "[", λ_1, med, med, ;
+    med, λ_2, med, ;
+    med, med, ⋱, ;
+    med, med, med, λ_n
+  )
   mat(delim: "[", 𝒙_1^⊤; 𝒙_2^⊤; ⋮; 𝒙_n^⊤)
 $
 
@@ -264,7 +274,7 @@ $ 𝑨 = ∑_i^n λ_i 𝒙_i 𝒙_i^⊤ $
 ]
 
 #lemma[
-  $1/sqrt(λ_i) 𝑨 𝒗_i, ∀i ∈ [1, n]$是一组正交的单位向量。
+  $1 / sqrt(λ_i) 𝑨 𝒗_i, ∀i ∈ [1, n]$是一组正交的单位向量。
 ]
 
 #lemma[
@@ -284,11 +294,13 @@ $ 𝜮 = mat(delim: "[", 𝑺; 𝑶) $
 其中，$𝑺$为$n$阶对角方阵，即
 
 $
-  𝑺 = mat(delim: "[",
-  σ_1, med, med, med;
-  med, σ_2, med, med;
-  med, med, ⋱, ;
-  med, med, med, σ_n)
+  𝑺 = mat(
+    delim: "[",
+    σ_1, med, med, med;
+    med, σ_2, med, med;
+    med, med, ⋱, ;
+    med, med, med, σ_n
+  )
 $
 
 $𝑶$为$(m - n) × n$阶零矩阵。这样的分解称作奇异值分解（singular value decomposition，SVD）。$𝜮$的对角元即为$𝑨$的奇异值。
@@ -312,11 +324,13 @@ $
   𝑨 [v_1 med v_2 med … med v_r] =
   [σ_1 u_1 med σ_2 u_2 med … med σ_r u_r] =
   [u_1 med u_2 med … med u_r]
-  mat(delim: "[",
-  σ_1, med, med, med;
-  med, σ_2, med, med;
-  med, med, ⋱, ;
-  med, med, med, σ_n)
+  mat(
+    delim: "[",
+    σ_1, med, med, med;
+    med, σ_2, med, med;
+    med, med, ⋱, ;
+    med, med, med, σ_n
+  )
 $
 
 即$𝑨 v_1 = σ_1 u_1, med 𝑨 v_2 = σ_2 u_2, …, 𝑨 v_r = σ_r u_r$。这些$σ$是缩放因子，表示在变换过程中有缩放。而$𝑨$的左零空间和零空间将体现在$σ$的零值中。
@@ -327,11 +341,13 @@ $
   𝑨
   [v_1 v_2 ⋯ v_r v_(r + 1) ⋯ v_m] =
   [u_1 u_2 ⋯ u_r u_(r + 1) ⋯ u_n]
-  mat(delim: "[",
-  med, med, med, med;
-  med, ⋱, med, med;
-  med, med, σ_r, med;
-  med, med, med, [0])
+  mat(
+    delim: "[",
+    med, med, med, med;
+    med, ⋱, med, med;
+    med, med, σ_r, med;
+    med, med, med, [0]
+  )
 $
 
 最终可以写为$𝑨 𝑽 = 𝑼 𝜮$。可以看出其近似对角化公式，矩阵$𝑨$被转化为对角阵$𝜮$。注意到$𝑼,𝑽$是两组不同的正交基。进而可写作$𝑨 = 𝑼 𝜮 𝑽^(-1)$，因为$𝑽$是标准正交阵，故可写为$𝑨 = 𝑼 𝜮 𝑽^⊤$。

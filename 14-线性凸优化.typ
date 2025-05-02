@@ -1,4 +1,4 @@
-#import "@preview/qooklet:0.2.0": *
+#import "lib/lib.typ": *
 #show: qooklet.with(
   title: "线性凸优化",
   author: "Yāng Xīnbīn",
@@ -125,7 +125,7 @@ $ arg min_𝒙 L(𝒙, h) = arg min_𝒙 [f(𝒙) - λ g(𝒙)] $
 其中，$L(𝒙, h)$称为 Lagrange 函数，$λ$称为 Lagrange 乘子（multiplier）。其求解条件为
 
 $
-  ∇ L(𝒙, h) = 0 ⇔ cases(∇ _𝒙 L(𝒙, h) = 0, ∇ _λ L(𝒙, h) = 0) ⇔ cases(∇ f(𝒙) = λ g(𝒙), ∇ g(𝒙) = 0)
+  ∇ L(𝒙, h) = 0 ⇔ cases(∇_𝒙 L(𝒙, h) = 0, ∇_λ L(𝒙, h) = 0) ⇔ cases(∇ f(𝒙) = λ g(𝒙), ∇ g(𝒙) = 0)
 $
 
 #theorem[

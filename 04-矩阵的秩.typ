@@ -1,4 +1,4 @@
-#import "@preview/qooklet:0.2.0": *
+#import "lib/lib.typ": *
 #show: qooklet.with(
   title: "矩阵的秩",
   author: "Yāng Xīnbīn",
@@ -133,7 +133,7 @@
 #definition[
   左上角为单位阵，其余位置均为$0$的矩阵，称为标准形矩阵，如
 
-  $ mat(delim: "[", mat(delim: "[", 1, 0; 0, 1), 0; 0, 0) $
+  $ mat(delim: "[", mat(delim: "[", 1, 0, 0, 1), 0; 0, 0) $
 ]
 
 #theorem[
