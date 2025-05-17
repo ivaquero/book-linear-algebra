@@ -1,12 +1,7 @@
-#import "@preview/qooklet:0.1.1": *
-#show: doc => conf(
+#import "lib/lib.typ": *
+#show: chapter-style.with(
   title: "向量",
-  author: "Yāng Xīnbīn",
-  footer-cap: "Yāng Xīnbīn",
-  header-cap: "极简线性代数",
-  lang: "zh",
-  outline-on: true,
-  doc,
+  info: info,
 )
 
 = 向量的定义
@@ -25,7 +20,7 @@
 
 向量可以写成一列，也可以写成一行，分别称为列向量和行向量，行向量和列向量可以通过转置（transpose）相互转化，转置运算符为向量的上标$⊤$，如
 
-$ vecrow(delim: "[", a_1, a_2, …, a_n)^(⊤) = vec(a_1, a_2, ⋮, a_n) $
+$ vecrow(delim: "[", a_1, a_2, …, a_n)^⊤ = vec(a_1, a_2, ⋮, a_n) $
 
 == 特殊向量
 
@@ -46,7 +41,7 @@ $ vecrow(delim: "[", a_1, a_2, …, a_n)^(⊤) = vec(a_1, a_2, ⋮, a_n) $
 
 #definition[
   给定向量$𝒂$
-  $ 𝒂 = vecrow(delim: "[", a_1, a_2, …, a_n)^(⊤) $
+  $ 𝒂 = vecrow(delim: "[", a_1, a_2, …, a_n)^⊤ $
 
   则
   $ norm(𝒂) = sqrt(∑_(i=1)^n a_i^2) $
@@ -85,22 +80,17 @@ $
 ]
 
 #figure(
-  image("images/vec-add.png", width: 40%),
+  image("images/vec-add.png", width: 30%),
   caption: "向量加法",
-  supplement: "图",
 )
 
 标量乘法是加法的推广，令$c$为常数，则有
 
 $ c 𝒗 = vec(c v_1, c v_2) $
 
+#let data = csv("data/vec-add.csv")
 #figure(
-  xlsx-parser(
-    read("data/matrix.xlsx", encoding: none),
-    parse-table-style: false,
-    parse-stroke: false,
-    stroke: three-line(rgb("000")),
-  ),
+  tableq(data, 4),
   caption: "向量的和",
   supplement: "表",
   kind: table,
@@ -117,7 +107,7 @@ $ c 𝒗 = vec(c v_1, c v_2) $
 向量内积（inner product）为行向量 × 列向量，由于结果是标量，故又称标量积
 
 $
-  𝒂^(⊤) 𝒃 = 𝒂⋅𝒃 = ⟨𝒂, 𝒃⟩ &= a_1b_1 + a_2b_2 \
+  𝒂^⊤ 𝒃 = 𝒂⋅𝒃 = ⟨𝒂, 𝒃⟩ &= a_1b_1 + a_2b_2 \
   &= frac(𝒂, norm(𝒂)) frac(𝒃, norm(𝒃)) cos θ
 $
 
@@ -150,10 +140,10 @@ $ 𝒂 × 𝒃 = norm(𝒂)norm(𝒃) sin θ $
 $
   𝒂 × 𝒃 &=
   mdet(
-𝒊, 𝒋, 𝒌;
-x_1, y_1, z_1;
-x_2, y_2, z_2
-) \ &=
+    𝒊, 𝒋, 𝒌;
+    x_1, y_1, z_1;
+    x_2, y_2, z_2
+  ) \ &=
   (y_1 z_2 - y_2 z_1)𝒊 -
   (x_1 z_2 - x_2 z_1)𝒋 +
   (x_1 y_2 - x_2 y_1)𝒌
@@ -165,24 +155,17 @@ $
 
 $ 𝒂 ⊗ 𝒃 = mat(delim: "[", a_1b_1, a_1b_2; a_2b_1, a_2b_2) $
 
-由于向量的张量积满足$(𝒂 ⊗ 𝒃)^(⊤) = 𝒃 ⊗ 𝒂$，矩阵可以写成张量积形式。
+由于向量的张量积满足$(𝒂 ⊗ 𝒃)^⊤ = 𝒃 ⊗ 𝒂$，矩阵可以写成张量积形式。
 
 == 运算律
 
+#let data = csv("data/vec-prod.csv")
 #figure(
-  xlsx-parser(
-    read("data/matrix.xlsx", encoding: none),
-    parse-table-style: false,
-    parse-stroke: false,
-    stroke: three-line(rgb("000")),
-    sheet-index: 1,
-  ),
+  tableq(data, 5),
   caption: "向量的积",
   supplement: "表",
   kind: table,
 )
-
-#pagebreak()
 
 = 向量范数
 <向量范数>
@@ -211,7 +194,7 @@ $ norm(𝒙 + 𝒚)_p ≤ norm(𝒙)_p + norm(𝒚)_p $
     columns: 4,
     align: center + horizon,
     inset: 4pt,
-    stroke: three-line(rgb("000")),
+    stroke: table-three-line(rgb("000")),
     [*范数*], [*又名*], [*数学含义*], [*公式*],
     [$ℓ_2$], [Euclidean 距离], [], [$sqrt(∑x_i^2)$],
     [$ℓ_1$], [Manhattan 距离], [向量元素绝对值之和], [$∑ |x_i|$],

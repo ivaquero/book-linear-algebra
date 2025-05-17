@@ -1,12 +1,7 @@
-#import "@preview/qooklet:0.1.1": *
-#show: doc => conf(
+#import "lib/lib.typ": *
+#show: chapter-style.with(
   title: "向量空间",
-  author: "Yāng Xīnbīn",
-  footer-cap: "Yāng Xīnbīn",
-  header-cap: "极简线性代数",
-  lang: "zh",
-  outline-on: true,
-  doc,
+  info: info,
 )
 
 = 向量空间
