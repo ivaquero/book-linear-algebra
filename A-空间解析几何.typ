@@ -1,6 +1,6 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "附录A：空间解析几何",
+#show: appendix-style.with(
+  title: "空间解析几何",
   info: info,
 )
 
