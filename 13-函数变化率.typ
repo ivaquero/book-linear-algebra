@@ -82,7 +82,7 @@ $ f(ξ) = frac(∫_a^b f(x), (b - a) \/ dd(x)) = frac(∫_a^b f(x) dd(x), b - a)
 
 即
 
-$ ctext("平均高度") = frac(ctext("面积"), ctext("宽度")) $
+$ ctext("平均高度") = ctext("面积") / ctext("宽度") $
 
 = 向量函数的变化
 
@@ -218,7 +218,7 @@ $ f(x) = f(x_0) + f^′(x_0)(x - x_0) $
 即$x_0 = 0$时的 Taylor 公式，即
 
 $
-  f(x) = ∑_(i = 0)^n frac(f^((i))(0), i!)x^i + R_n(x)
+  f(x) = sum_(i = 0)^n frac(f^((i))(0), i!)x^i + R_n(x)
 $
 
 == 几何意义
@@ -403,7 +403,7 @@ $
 梯度的散度可以表示为 Nabla 算子的内积
 
 $
-  grad ⋅ grad = grad^⊤grad = ∑ pdv(arrow(𝒇), x_i^2)
+  grad ⋅ grad = grad^⊤grad = sum pdv(arrow(𝒇), x_i^2)
 $
 
 为了区别 Nabla 算子的外积，通常采用 $laplace = grad ⋅ grad$，称$laplace$为 Laplace 算子。
