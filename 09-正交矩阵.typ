@@ -327,7 +327,6 @@ $
     [$ℓ_∞$], [行和范数], [矩阵的最大行和], [$arg max_(1 ⩽ i ⩽ n) sum_(j=1)^m norm(a_(i j))$],
   ),
   caption: "矩阵 _p_-范数",
-  supplement: "表",
   kind: table,
 )
 

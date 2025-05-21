@@ -61,7 +61,6 @@
     [左零空间], [$N(𝑨^⊤)$], [$ℝ^m$], [$m - r$],
   ),
   caption: "子空间的维度",
-  supplement: "表",
   kind: table,
 )
 
@@ -259,7 +258,6 @@ $
     [$ℝ^n$], [$𝑨$], [$𝑨 𝒙$或$"colsp"(𝑨)$], [$ℝ^m$],
   ),
   caption: "映射规则",
-  supplement: "表",
   kind: table,
 )
 

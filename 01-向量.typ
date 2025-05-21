@@ -92,7 +92,6 @@ $ c 𝒗 = vec(c v_1, c v_2) $
 #figure(
   tableq(data, 4),
   caption: "向量的和",
-  supplement: "表",
   kind: table,
 )
 
@@ -163,7 +162,6 @@ $ 𝒂 ⊗ 𝒃 = mat(delim: "[", a_1b_1, a_1b_2; a_2b_1, a_2b_2) $
 #figure(
   tableq(data, 5),
   caption: "向量的积",
-  supplement: "表",
   kind: table,
 )
 
@@ -200,10 +198,9 @@ $ norm(𝒙 + 𝒚)_p ≤ norm(𝒙)_p + norm(𝒚)_p $
     [$ℓ_1$], [Manhattan 距离], [向量元素绝对值之和], [$sum |x_i|$],
     [$ℓ_∞$], [Chebyshev 距离], [向量元素绝对值的最大值], [$arg max |x_i|$],
   ),
-  caption: "向量 _p_-范数",
-  supplement: "表",
+  caption: "向量 p-范数",
   kind: table,
-)
+) <t1>
 
 对同一向量
 

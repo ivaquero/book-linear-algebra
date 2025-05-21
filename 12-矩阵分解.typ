@@ -399,7 +399,6 @@ $ norm(𝑨)_* = sum_(i=1)^(min{m, n}) σ_i $
 #figure(
   tableq(data, 4),
   caption: "常见矩阵分解",
-  supplement: "表",
   kind: table,
 )
 
