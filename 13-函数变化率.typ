@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "函数变化率",
-  info: info,
-)
+#show: chapter-style.with(title: "函数变化率", info: info)
 
 = 一元函数的变化
 <一元函数的变化>
@@ -33,15 +30,12 @@ $
   灵敏度：$Y$相对于$X$的瞬时变化率。
 ]
 
-#figure(
-  image("images/func-deriv.png", width: 80%),
-  caption: "导数",
-)
+#figure(image("images/func-deriv.png", width: 80%), caption: "导数")
 
 $
-  "as" Δ x & ⇒ & 0\
-  "secant lines" & ⇒ & "tangent line"\
-  "slope of secant lines" & ⇒ & "slope of tangent line"\
+                   "as" Δ x & ⇒ &                              0 \
+             "secant lines" & ⇒ &                 "tangent line" \
+    "slope of secant lines" & ⇒ &        "slope of tangent line" \
   "average rates of change" & ⇒ & "instantaneous rate of change"
 $
 
@@ -137,8 +131,8 @@ $
 此矩阵即 Jacobian 矩阵。原函数的近似为
 
 $
-  f(𝒙) & ≈ f(𝒙_k) + grad f(𝒙_k) ⋅(𝒙 - 𝒙_k)\
-  & ≡ f(𝒙_k) + 𝑱_(𝒙_k) ⋅(𝒙 - 𝒙_k)
+  f(𝒙) & ≈ f(𝒙_k) + grad f(𝒙_k) ⋅(𝒙 - 𝒙_k) \
+       & ≡ f(𝒙_k) + 𝑱_(𝒙_k) ⋅(𝒙 - 𝒙_k)
 $
 
 == Hessian 矩阵

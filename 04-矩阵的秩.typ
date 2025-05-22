@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "矩阵的秩",
-  info: info,
-)
+#show: chapter-style.with(title: "矩阵的秩", info: info)
 
 = 四个子空间
 <四个子空间>
@@ -189,8 +186,8 @@ $ mat(delim: "[", 0) $
 综上
 
 $
-  dim C(𝑨^⊤) + & dim N(𝑨) &= 4 &= n\
-  dim C(𝑨) + & dim N(𝑨^⊤) &= 1 &= m
+  dim C(𝑨^⊤) + & dim N(𝑨)   & = 4 & = n \
+    dim C(𝑨) + & dim N(𝑨^⊤) & = 1 & = m
 $
 
 = 矩阵函数

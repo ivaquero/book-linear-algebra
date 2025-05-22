@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "矩阵分解",
-  info: info,
-)
+#show: chapter-style.with(title: "矩阵分解", info: info)
 
 = LU 分解
 <LU-分解>
@@ -21,8 +18,8 @@ LU 分解的意义在于求解大型方程组。一个方程组可简化为$𝑨
 对方程组
 
 $
-  2 x - 4 y &= 2\
-  x + 7 y &= 10
+  2 x - 4 y & = 2  \
+    x + 7 y & = 10
 $
 
 可转化为矩阵形式$𝑨 𝒙 = 𝒃$，其中
@@ -396,13 +393,6 @@ $ norm(𝑨)_* = sum_(i=1)^(min{m, n}) σ_i $
 = 总结
 
 #let data = csv("data/mat-decomp.csv")
-#figure(
-  tableq(data, 4),
-  caption: "常见矩阵分解",
-  kind: table,
-)
+#figure(tableq(data, 4), caption: "常见矩阵分解", kind: table)
 
-#figure(
-  image("images/mat-decomp.png", width: 60%),
-  caption: "常见矩阵分解",
-)
+#figure(image("images/mat-decomp.png", width: 60%), caption: "常见矩阵分解")

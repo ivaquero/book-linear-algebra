@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "特征值的应用",
-  info: info,
-)
+#show: chapter-style.with(title: "特征值的应用", info: info)
 
 = 递归
 <递归>

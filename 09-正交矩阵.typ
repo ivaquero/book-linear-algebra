@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "正交阵",
-  info: info,
-)
+#show: chapter-style.with(title: "正交阵", info: info)
 
 = 向量的内积
 <向量的内积>
@@ -306,13 +303,12 @@ $
 对$ℓ_2$范数
 
 $
-  norm(𝑨)_2
-  &= max_(𝒙≠𝟎) frac(norm(𝑨 𝒙)_2, norm(𝒙)_2)
-  = max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑨^(H)𝑨 𝒙), norm(𝒙)_2) \
-  &= max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑸^(H) 𝜦 𝑸 𝒙), norm(𝒙)_2)
-  = max_(𝒙≠𝟎) frac(sqrt((𝑸 𝒙)^(H) 𝜦 (𝑸 𝒙)), norm(𝑸 𝒙)_2) \
-  &= max_(𝒚≠𝟎) frac(sqrt(𝒚^(H) 𝜦 𝒚), norm(𝒚)_2)
-  = max_(𝒚≠𝟎) sqrt(frac(sum λ_i y_i^2, sum y_i^2)) ≤ sqrt(λ_(max))
+  norm(𝑨)_2 & = max_(𝒙≠𝟎) frac(norm(𝑨 𝒙)_2, norm(𝒙)_2)
+              = max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑨^(H)𝑨 𝒙), norm(𝒙)_2)                 \
+            & = max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑸^(H) 𝜦 𝑸 𝒙), norm(𝒙)_2)
+              = max_(𝒙≠𝟎) frac(sqrt((𝑸 𝒙)^(H) 𝜦 (𝑸 𝒙)), norm(𝑸 𝒙)_2)           \
+            & = max_(𝒚≠𝟎) frac(sqrt(𝒚^(H) 𝜦 𝒚), norm(𝒚)_2)
+              = max_(𝒚≠𝟎) sqrt(frac(sum λ_i y_i^2, sum y_i^2)) ≤ sqrt(λ_(max))
 $
 
 #figure(
@@ -322,9 +318,20 @@ $
     inset: 4pt,
     stroke: table-three-line(rgb("000")),
     [范数], [别名], [数学含义], [值],
-    [$ℓ_2$], [谱范数], [$𝑨^⊤ 𝑨$的最大特征值], [$σ_(max) = sqrt(λ_(max)(𝑨^(H)𝑨))$],
-    [$ℓ_1$], [列和范数], [矩阵的最大列和], [$arg max_(1 ⩽ j ⩽ n) med sum_(i=1)^m norm(a_(i j))$],
-    [$ℓ_∞$], [行和范数], [矩阵的最大行和], [$arg max_(1 ⩽ i ⩽ n) sum_(j=1)^m norm(a_(i j))$],
+    [$ℓ_2$],
+    [谱范数],
+    [$𝑨^⊤ 𝑨$的最大特征值],
+    [$σ_(max) = sqrt(λ_(max)(𝑨^(H)𝑨))$],
+
+    [$ℓ_1$],
+    [列和范数],
+    [矩阵的最大列和],
+    [$arg max_(1 ⩽ j ⩽ n) med sum_(i=1)^m norm(a_(i j))$],
+
+    [$ℓ_∞$],
+    [行和范数],
+    [矩阵的最大行和],
+    [$arg max_(1 ⩽ i ⩽ n) sum_(j=1)^m norm(a_(i j))$],
   ),
   caption: "矩阵 _p_-范数",
   kind: table,

@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "向量",
-  info: info,
-)
+#show: chapter-style.with(title: "向量", info: info)
 
 = 向量的定义
 <向量的定义>
@@ -79,21 +76,14 @@ $
   注意，$-𝒗$与$𝒗$之和是零向量$𝟎$，这和数字$0$不一样，$𝟎$有分量$0$和$0$。
 ]
 
-#figure(
-  image("images/vec-add.png", width: 30%),
-  caption: "向量加法",
-)
+#figure(image("images/vec-add.png", width: 30%), caption: "向量加法")
 
 标量乘法是加法的推广，令$c$为常数，则有
 
 $ c 𝒗 = vec(c v_1, c v_2) $
 
 #let data = csv("data/vec-add.csv")
-#figure(
-  tableq(data, 4),
-  caption: "向量的和",
-  kind: table,
-)
+#figure(tableq(data, 4), caption: "向量的和", kind: table)
 
 #tip[
   标量乘法的几何意义即缩放。
@@ -106,8 +96,8 @@ $ c 𝒗 = vec(c v_1, c v_2) $
 向量内积（inner product）为行向量 × 列向量，由于结果是标量，故又称标量积
 
 $
-  𝒂^⊤ 𝒃 = 𝒂⋅𝒃 = ⟨𝒂, 𝒃⟩ &= a_1b_1 + a_2b_2 \
-  &= frac(𝒂, norm(𝒂)) frac(𝒃, norm(𝒃)) cos θ
+  𝒂^⊤ 𝒃 = 𝒂⋅𝒃 = ⟨𝒂, 𝒃⟩ & = a_1b_1 + a_2b_2                         \
+                       & = frac(𝒂, norm(𝒂)) frac(𝒃, norm(𝒃)) cos θ
 $
 
 其中，$⟨⟩$为内积符号，$θ$为$𝒂$和$𝒃$的夹角。
@@ -137,15 +127,16 @@ $ 𝒂 × 𝒃 = norm(𝒂)norm(𝒃) sin θ $
 空间解析几何中，向量叉积又被称为外部积（exterior product），结果向量方向遵循右手法则
 
 $
-  𝒂 × 𝒃 &=
-  mdet(
-    𝒊, 𝒋, 𝒌;
-    x_1, y_1, z_1;
-    x_2, y_2, z_2
-  ) \ &=
-  (y_1 z_2 - y_2 z_1)𝒊 -
-  (x_1 z_2 - x_2 z_1)𝒋 +
-  (x_1 y_2 - x_2 y_1)𝒌
+  𝒂 × 𝒃 & =
+          mdet(
+            𝒊, 𝒋, 𝒌;
+            x_1, y_1, z_1;
+            x_2, y_2, z_2
+          )                    \
+        & =
+          (y_1 z_2 - y_2 z_1)𝒊 -
+          (x_1 z_2 - x_2 z_1)𝒋 +
+          (x_1 y_2 - x_2 y_1)𝒌
 $
 
 === 外积
@@ -159,11 +150,7 @@ $ 𝒂 ⊗ 𝒃 = mat(delim: "[", a_1b_1, a_1b_2; a_2b_1, a_2b_2) $
 == 运算律
 
 #let data = csv("data/vec-prod.csv")
-#figure(
-  tableq(data, 5),
-  caption: "向量的积",
-  kind: table,
-)
+#figure(tableq(data, 5), caption: "向量的积", kind: table)
 
 = 向量范数
 <向量范数>
