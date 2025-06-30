@@ -96,12 +96,22 @@ LU 分解的存在性是有条件的：
 
 为解决 LU 分解稳定性的问题，需要引入置换矩阵，即使用 PLU 分解。
 
+=== 置换矩阵
+
 #definition[
   若$𝑷$为对任意可逆阵$𝑨^(-1)$有
   $ 𝑷 𝑨 = 𝑳 𝑼 $
 
-  则为置换矩阵（permutation matrix）
+  则为置换矩阵（permutation matrix）。
+]
 
+#definition[
+  对n阶置换矩阵，其每行每列有1个元素为$1$，其余为$0$。其可表示为
+  $ 𝑷 = (𝒆_(π(1)), 𝒆_(π(2)), ..., 𝒆_(π(n))) $
+  其中，$π: {1, 2, ..., n} → {1, 2, ..., n}$为一个双射，也称为${1, 2, ..., n}$的一个置换。
+]
+
+#tip[
   $n$阶方阵的置换矩阵有$(n / 1) = n!$个。
 ]
 
@@ -154,6 +164,8 @@ $
     med, med, med, ⋱, ⋱
   )
 $
+
+=== Thomas 算法
 
 #theorem[
   设上述三对角阵$𝑨$是可逆的，若下列任何一个成立，可用 Thomas 算法求解$𝑨 𝒙 = 𝒛$：
@@ -393,6 +405,6 @@ $ norm(𝑨)_* = sum_(i=1)^(min{m, n}) σ_i $
 = 总结
 
 #let data = csv("data/mat-decomp.csv")
-#figure(tableq(data, 4), caption: "常见矩阵分解", kind: table)
+#figure(tableq(data, 2), caption: "常见矩阵分解", kind: table)
 
 #figure(image("images/mat-decomp.png", width: 60%), caption: "常见矩阵分解")
