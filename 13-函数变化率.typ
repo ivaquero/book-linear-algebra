@@ -301,19 +301,19 @@ $
 于是，有
 
 $
-  pdv(𝑱, 𝒚) &= mat(
-    delim: "[",
-    pdv(𝑱, f_1(𝒚)) pdv(f_1(𝒚), y_1) + pdv(𝑱, f_2(𝒚)) pdv(f_2(𝒚), y_1);
-    pdv(𝑱, f_1(𝒚)) pdv(f_1(𝒚), y_2) + pdv(𝑱, f_2(𝒚)) pdv(f_2(𝒚), y_2);
-    pdv(𝑱, f_1(𝒚)) pdv(f_1(𝒚), y_3) + pdv(𝑱, f_2(𝒚)) pdv(f_2(𝒚), y_3)
-  )\
-  &= mat(
-    delim: "[",
-    pdv(f_1(𝒚), y_1), pdv(f_2(𝒚), y_1);
-    pdv(f_1(𝒚), y_2), pdv(f_2(𝒚), y_2);
-    pdv(f_1(𝒚), y_3), pdv(f_2(𝒚), y_3)
-  )
-  mat(delim: "[", pdv(𝑱, f_1(𝒚)); pdv(𝑱, f_2(𝒚))) = pdv(𝒇, 𝒚) pdv(𝑱, 𝒇)
+  pdv(𝑱, 𝒚) & = mat(
+                delim: "[",
+                pdv(𝑱, f_1(𝒚)) pdv(f_1(𝒚), y_1) + pdv(𝑱, f_2(𝒚)) pdv(f_2(𝒚), y_1);
+                pdv(𝑱, f_1(𝒚)) pdv(f_1(𝒚), y_2) + pdv(𝑱, f_2(𝒚)) pdv(f_2(𝒚), y_2);
+                pdv(𝑱, f_1(𝒚)) pdv(f_1(𝒚), y_3) + pdv(𝑱, f_2(𝒚)) pdv(f_2(𝒚), y_3)
+              )                                                                     \
+            & = mat(
+                delim: "[",
+                pdv(f_1(𝒚), y_1), pdv(f_2(𝒚), y_1);
+                pdv(f_1(𝒚), y_2), pdv(f_2(𝒚), y_2);
+                pdv(f_1(𝒚), y_3), pdv(f_2(𝒚), y_3)
+              )
+              mat(delim: "[", pdv(𝑱, f_1(𝒚)); pdv(𝑱, f_2(𝒚))) = pdv(𝒇, 𝒚) pdv(𝑱, 𝒇)
 $
 
 == 方程化简
