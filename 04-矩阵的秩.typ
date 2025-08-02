@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "矩阵的秩",
-  info: info,
-)
+#show: chapter-style.with(title: "矩阵的秩", info: info)
 
 = 四个子空间
 <四个子空间>
@@ -61,7 +58,6 @@
     [左零空间], [$N(𝑨^⊤)$], [$ℝ^m$], [$m - r$],
   ),
   caption: "子空间的维度",
-  supplement: "表",
   kind: table,
 )
 
@@ -190,8 +186,8 @@ $ mat(delim: "[", 0) $
 综上
 
 $
-  dim C(𝑨^⊤) + & dim N(𝑨) &= 4 &= n\
-  dim C(𝑨) + & dim N(𝑨^⊤) &= 1 &= m
+  dim C(𝑨^⊤) + & dim N(𝑨)   & = 4 & = n \
+    dim C(𝑨) + & dim N(𝑨^⊤) & = 1 & = m
 $
 
 = 矩阵函数
@@ -259,7 +255,6 @@ $
     [$ℝ^n$], [$𝑨$], [$𝑨 𝒙$或$"colsp"(𝑨)$], [$ℝ^m$],
   ),
   caption: "映射规则",
-  supplement: "表",
   kind: table,
 )
 

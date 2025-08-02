@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
-#show: chapter-style.with(
-  title: "正交阵",
-  info: info,
-)
+#show: chapter-style.with(title: "正交阵", info: info)
 
 = 向量的内积
 <向量的内积>
@@ -141,11 +138,11 @@ $ norm(𝒗)^2 = |𝒗, 𝒒_1^2 + … + 𝒗, 𝒒_n^2 $
   设向量空间$𝒱$中，$𝒗_1, …, 𝒗_m$是一组基，可通过下述方法找到$𝒱$中的一组正交基
 
   $
-    𝒒_1 &= 𝒗_1\
-    𝒒_2 &= 𝒗_2 - frac(𝒗_2⋅𝒒_1, 𝒒_1⋅𝒒_1) 𝒒_1\
-    𝒒_3 &= 𝒗_3 - frac(𝒗_3⋅𝒒_1, 𝒒_1⋅𝒒_1) 𝒒_1 - frac(𝒗_3⋅𝒒_2, 𝒒_2⋅𝒒_2) 𝒒_2\
-    & ⋮\
-    𝒒_n &= 𝒗_n - frac(𝒗_n⋅𝒒_1, 𝒒_1⋅𝒒_1) 𝒒_1 - … - frac(𝒗_n⋅𝒒_(n -1), 𝒒_(n -1)⋅𝒒_(n -1)) 𝒒_(n -1)
+    𝒒_1 & = 𝒗_1                                                                                   \
+    𝒒_2 & = 𝒗_2 - frac(𝒗_2⋅𝒒_1, 𝒒_1⋅𝒒_1) 𝒒_1                                                      \
+    𝒒_3 & = 𝒗_3 - frac(𝒗_3⋅𝒒_1, 𝒒_1⋅𝒒_1) 𝒒_1 - frac(𝒗_3⋅𝒒_2, 𝒒_2⋅𝒒_2) 𝒒_2                         \
+        & ⋮                                                                                       \
+    𝒒_n & = 𝒗_n - frac(𝒗_n⋅𝒒_1, 𝒒_1⋅𝒒_1) 𝒒_1 - … - frac(𝒗_n⋅𝒒_(n -1), 𝒒_(n -1)⋅𝒒_(n -1)) 𝒒_(n -1)
   $
 
   其中，$𝒒_1, …, 𝒒_n$是$𝒱$中的一组标准正交基
@@ -306,13 +303,12 @@ $
 对$ℓ_2$范数
 
 $
-  norm(𝑨)_2
-  &= max_(𝒙≠𝟎) frac(norm(𝑨 𝒙)_2, norm(𝒙)_2)
-  = max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑨^(H)𝑨 𝒙), norm(𝒙)_2) \
-  &= max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑸^(H) 𝜦 𝑸 𝒙), norm(𝒙)_2)
-  = max_(𝒙≠𝟎) frac(sqrt((𝑸 𝒙)^(H) 𝜦 (𝑸 𝒙)), norm(𝑸 𝒙)_2) \
-  &= max_(𝒚≠𝟎) frac(sqrt(𝒚^(H) 𝜦 𝒚), norm(𝒚)_2)
-  = max_(𝒚≠𝟎) sqrt(frac(sum λ_i y_i^2, sum y_i^2)) ≤ sqrt(λ_(max))
+  norm(𝑨)_2 & = max_(𝒙≠𝟎) frac(norm(𝑨 𝒙)_2, norm(𝒙)_2)
+              = max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑨^(H)𝑨 𝒙), norm(𝒙)_2)                 \
+            & = max_(𝒙≠𝟎) frac(sqrt(𝒙^(H)𝑸^(H) 𝜦 𝑸 𝒙), norm(𝒙)_2)
+              = max_(𝒙≠𝟎) frac(sqrt((𝑸 𝒙)^(H) 𝜦 (𝑸 𝒙)), norm(𝑸 𝒙)_2)           \
+            & = max_(𝒚≠𝟎) frac(sqrt(𝒚^(H) 𝜦 𝒚), norm(𝒚)_2)
+              = max_(𝒚≠𝟎) sqrt(frac(sum λ_i y_i^2, sum y_i^2)) ≤ sqrt(λ_(max))
 $
 
 #figure(
@@ -323,11 +319,12 @@ $
     stroke: table-three-line(rgb("000")),
     [范数], [别名], [数学含义], [值],
     [$ℓ_2$], [谱范数], [$𝑨^⊤ 𝑨$的最大特征值], [$σ_(max) = sqrt(λ_(max)(𝑨^(H)𝑨))$],
+
     [$ℓ_1$], [列和范数], [矩阵的最大列和], [$arg max_(1 ⩽ j ⩽ n) med sum_(i=1)^m norm(a_(i j))$],
+
     [$ℓ_∞$], [行和范数], [矩阵的最大行和], [$arg max_(1 ⩽ i ⩽ n) sum_(j=1)^m norm(a_(i j))$],
   ),
   caption: "矩阵 _p_-范数",
-  supplement: "表",
   kind: table,
 )
 
