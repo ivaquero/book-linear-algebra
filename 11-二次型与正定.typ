@@ -18,8 +18,8 @@ $ cases(delim: "{", 3 x_1^2 + 2 x_1 x_2 + x_2^2, x_1^2 - 2 x_2^2) $ <qua-form>
 由上，根据矩阵乘法，二次型@qua-form 中的 (2) 式可以写成
 
 $
-  x_1^2 - 2 x_2^2 & = 3 x_1⋅x_1 - 2 x_2⋅x_2                                                             \
-                  & = mat(delim: "[", 3 x_1 - 7 x_2) mat(delim: "[", x_1; x_2)                          \
+  x_1^2 - 2 x_2^2 & = 3 x_1⋅x_1 - 2 x_2⋅x_2 \
+                  & = mat(delim: "[", 3 x_1 - 7 x_2) mat(delim: "[", x_1; x_2) \
                   & = mat(delim: "[", x_1, x_2) mat(delim: "[", 3, 0; 0, - 7) mat(delim: "[", x_1; x_2)
 $
 
