@@ -83,7 +83,11 @@ $
 $ c 𝒗 = vec(c v_1, c v_2) $
 
 #let data = csv("data/vec-add.csv")
-#figure(tableq(data, 4), caption: "向量的和", kind: table)
+#figure(
+  tableq(data, 4),
+  caption: "向量的和",
+  kind: table,
+)
 
 #tip[
   标量乘法的几何意义即缩放。
