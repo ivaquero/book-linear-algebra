@@ -113,7 +113,11 @@ $
 $
 
 #let data = csv("data/vec-add.csv")
-#figure(tableq(data, 4), caption: "矩阵初等运算", kind: table)
+#figure(
+  tableq(data, 4),
+  caption: "矩阵初等运算",
+  kind: table,
+)
 
 == 初等行运算
 <初等行运算>

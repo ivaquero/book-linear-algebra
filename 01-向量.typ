@@ -76,14 +76,21 @@ $
   注意，$-𝒗$与$𝒗$之和是零向量$𝟎$，这和数字$0$不一样，$𝟎$有分量$0$和$0$。
 ]
 
-#figure(image("images/vec-add.png", width: 30%), caption: "向量加法")
+#figure(
+  image("images/vec-add.png", width: 30%),
+  caption: "向量加法",
+)
 
 标量乘法是加法的推广，令$c$为常数，则有
 
 $ c 𝒗 = vec(c v_1, c v_2) $
 
 #let data = csv("data/vec-add.csv")
-#figure(tableq(data, 4), caption: "向量的和", kind: table)
+#figure(
+  tableq(data, 4),
+  caption: "向量的和",
+  kind: table,
+)
 
 #tip[
   标量乘法的几何意义即缩放。
