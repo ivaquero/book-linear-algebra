@@ -47,7 +47,10 @@ $
 
 现需要找到距离图中三个点$(1, 1)$ , $(2, 2)$ , $(3, 2)$偏差最小的直线$𝒃 = C + D t$
 
-#figure(image("images/ortho-lsq.png", width: 50%), caption: "最小二乘投影")
+#figure(
+  image("images/ortho-lsq.png", width: 50%),
+  caption: "最小二乘投影",
+)
 
 根据条件可以得到方程组
 

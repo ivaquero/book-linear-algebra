@@ -30,7 +30,10 @@ $
   灵敏度：$Y$相对于$X$的瞬时变化率。
 ]
 
-#figure(image("images/func-deriv.png", width: 80%), caption: "导数")
+#figure(
+  image("images/func-deriv.png", width: 80%),
+  caption: "导数",
+)
 
 $
                    "as" Δ x & ⇒ &                              0 \

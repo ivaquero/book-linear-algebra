@@ -407,4 +407,7 @@ $ norm(𝑨)_* = sum_(i=1)^(min{m, n}) σ_i $
 #let data = csv("data/mat-decomp.csv")
 #figure(tableq(data, 2), caption: "常见矩阵分解", kind: table)
 
-#figure(image("images/mat-decomp.png", width: 60%), caption: "常见矩阵分解")
+#figure(
+  image("images/mat-decomp.png", width: 60%),
+  caption: "常见矩阵分解",
+)

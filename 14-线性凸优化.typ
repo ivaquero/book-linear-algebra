@@ -27,7 +27,10 @@ $ θ ∈ ℝ^n, 𝒃 ∈ ℝ, ℂ = {𝒙|θ^⊤⋅𝒙 + 𝒃 ⩽ 0} $
   对$L_p$范数，当$p ≥ 1$，得到的集合为凸集。
 ]
 
-#figure(image("images/func-convex.png", width: 80%), caption: "凸函数")
+#figure(
+  image("images/func-convex.png", width: 80%),
+  caption: "凸函数",
+)
 
 == 凸函数
 <凸函数>
