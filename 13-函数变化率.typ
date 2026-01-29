@@ -258,7 +258,7 @@ $
 == 向量对向量
 <向量对向量>
 
-#theorem(title: "标量链式法则")[
+#theorem(title: ctext("标量链式法则"))[
   对$y = f(u), u = g(x)$，有
 
   $
@@ -266,7 +266,7 @@ $
   $
 ]
 
-#theorem(title: "向量链式法则")[
+#theorem(title: ctext("向量链式法则"))[
   $
     underbrace(pdv(y, 𝒙), (1,n)) = underbrace(pdv(y, u), (1,1)) underbrace(pdv(u, 𝒙), (1,n)) quad
     underbrace(pdv(y, 𝒙), (1,n)) = underbrace(pdv(y, 𝒖), (1,k)) underbrace(pdv(𝒖, 𝒙), (k,n)) quad
@@ -366,7 +366,7 @@ $ div arrow(𝒇) = pdv(𝒙, 𝒙) + pdv(𝒚, 𝒚) $
 
 得到的标量称为散度，表示发散的程度，是物理中通量的局部描述，是通量的体密度。
 
-#theorem(title: "Gauss 公式")[
+#theorem(title: ctext("Gauss 公式"))[
   $
     underbrace(∯_(a V) arrow(𝒇)⋅arrow(𝒏) dd(S), ctext("流过边界的通量")) = underbrace(∭_V div arrow(𝒇) dd(V), ctext("内部所有散度的贡献"))
   $
@@ -387,7 +387,7 @@ $
 
 得到的向量称为旋度（curl），其方向服从右手法则，是物理中环量的局部描述，是环量的面密度。
 
-#theorem(title: "Stokes 公式")[
+#theorem(title: ctext("Stokes 公式"))[
   $
     underbrace(∮_(a S) arrow(𝒇)⋅dd(𝒓), ctext("环绕边界的环量")) = underbrace(∬_S curl arrow(𝒇)⋅dd(S), ctext("曲目上旋度的贡献"))
   $
