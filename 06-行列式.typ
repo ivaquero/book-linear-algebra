@@ -254,7 +254,7 @@ $
 #theorem[
   设$|𝑽|$为 Vandermonde 行列式，则
 
-  $ |𝑽| = ∏_(1 ⩽ i < j ⩽ n)(x_j - x_i) $
+  $ |𝑽| = product_(1 ⩽ i < j ⩽ n)(x_j - x_i) $
 
 ]
 如行列式
