@@ -138,7 +138,7 @@ $ mdet(a_11, a_12, a_13; a_21, a_22, a_23; a_31, a_32, a_33) $
 
   - 局部分配律
 
-  $ mdet(a + a^′, b + b^′; c, d) = mdet(a, b; c, d) + mdet(a^′, b^′; c, d) $
+  $ mdet(a + a^', b + b^'; c, d) = mdet(a, b; c, d) + mdet(a^', b^'; c, d) $
 ]
 
 #theorem[
