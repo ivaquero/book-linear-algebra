@@ -116,7 +116,6 @@ $
 #figure(
   tableq(data, 4),
   caption: "矩阵初等运算",
-  kind: table,
 )
 
 == 初等行运算
@@ -300,7 +299,6 @@ Frobenius 内积是半双线性形式，其具有以下性质
     [内积], [Frobenius 内积], [$"Const" = 𝑨_(m×n) : 𝑩_(m×n)$],
   ),
   caption: "矩阵的积",
-  kind: table,
 )
 
 = 矩阵的逆

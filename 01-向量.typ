@@ -89,7 +89,6 @@ $ c 𝒗 = vec(c v_1, c v_2) $
 #figure(
   tableq(data, 4),
   caption: "向量的和",
-  kind: table,
 )
 
 #tip[
@@ -193,7 +192,6 @@ $ norm(𝒙 + 𝒚)_p ≤ norm(𝒙)_p + norm(𝒚)_p $
     [$ℓ_∞$], [Chebyshev 距离], [向量元素绝对值的最大值], [$arg max |x_i|$],
   ),
   caption: "向量 p-范数",
-  kind: table,
 ) <t1>
 
 对同一向量
