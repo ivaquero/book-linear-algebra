@@ -156,7 +156,11 @@ $ 𝒂 ⊗ 𝒃 = mat(delim: "[", a_1b_1, a_1b_2; a_2b_1, a_2b_2) $
 == 运算律
 
 #let data = csv("data/vec-prod.csv")
-#figure(tableq(data, 5), caption: "向量的积", kind: table)
+#figure(
+  tableq(data, 6),
+  caption: "向量的积",
+  kind: table,
+)
 
 = 向量范数
 <向量范数>
