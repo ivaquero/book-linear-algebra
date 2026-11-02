@@ -47,8 +47,8 @@ $
 推导可使用矩形面积变化，即给边长赋予相应的值，如$x sin(x)$
 
 + 令边长分别为$x$和$sin(x)$，则面积$A = x sin(x)$
-+ 令两边分别增长$dd(x)$和$dd(s)in(x)$，可得新面积$A^'$
-+ $Δ A = x^2 d(sin(x)) + d(x^2) sin(x)$
++ 令两边分别增长$dd(x)$和$dd(sin(x))$，可得新面积$A^'$
++ $Δ A = x ⋅ dd(sin(x)) + sin(x) ⋅ dd(x)$
 + $f^'(x) = frac(Δ A, dd(x))$
 
 #tip[
@@ -96,7 +96,7 @@ $ ctext("平均高度") = ctext("面积") / ctext("宽度") $
 $ grad = mat(delim: "[", pdv(, x_1), pdv(, x_2), ..., pdv(, x_n))^⊤ $
 梯度为多元函数的变化率，其表达式为一个偏导数组成的向量，可以看作是 Nabla 算子与向量函数的内积
 
-$ div arrow(𝒇) = mat(delim: "[", pdv(f, x_1); pdv(f, x_2); ⋮; pdv(f, x_n)) $
+$ grad f = mat(delim: "[", pdv(f, x_1); pdv(f, x_2); ⋮; pdv(f, x_n)) $
 原函数的近似为
 
 $ f(𝒙) ≈ f(𝒙_0) + grad f(𝒙_0) ⋅(𝒙 - 𝒙_0) $
@@ -169,7 +169,7 @@ $ f(𝒙) ≈ f(𝒙_0) + grad f(𝒙_0) ⋅(𝒙 - 𝒙_0) + 1 / 2(𝒙 - 𝒙_
 
 - $f^''(x_0) < 0$，$x_0$为极大值点
 - $f^''(x_0) > 0$，$x_0$为极小值点
-- $f^''(x_0) = 0$，$x_0$为鞍点
+- $f^''(x_0) = 0$，二阶判别失效，无法据此判断
 - $∄f^''(x_0)$，无法判断
 
 当多元函数$f$在$𝒙 = 𝒙_0$处，$grad f(𝒙_0) = 𝟎$，则
@@ -287,10 +287,9 @@ $
     mat(delim: "[", pdv(f(𝒚), y_1); pdv(f(𝒚), y_2); ⋮; pdv(f(𝒚), y_m)) =
     mat(
       delim: "[",
-      pdv(f_1(𝒚), y_1), , …, pdv(f_n(𝒚), y_1);
-      ⋮, ⋱, , ⋮;
-      ⋮, , ⋱, ⋮;
-      pdv(f_1(𝒚), y_m), …, …, pdv(f_n(𝒚), y_m)
+      pdv(f_1(𝒚), y_1), …, pdv(f_n(𝒚), y_1);
+      ⋮, ⋱, ⋮;
+      pdv(f_1(𝒚), y_m), …, pdv(f_n(𝒚), y_m)
     )_(m×n)
   $
 ]
@@ -389,7 +388,7 @@ $
 
 #theorem(ctext("Stokes 公式"))[
   $
-    underbrace(∮_(a S) arrow(𝒇)⋅dd(𝒓), ctext("环绕边界的环量")) = underbrace(∬_S curl arrow(𝒇)⋅dd(S), ctext("曲目上旋度的贡献"))
+    underbrace(∮_(a S) arrow(𝒇)⋅dd(𝒓), ctext("环绕边界的环量")) = underbrace(∬_S curl arrow(𝒇)⋅dd(S), ctext("曲面上旋度的贡献"))
   $
 ]
 
