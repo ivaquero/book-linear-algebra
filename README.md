@@ -47,21 +47,22 @@ typst compile book-linear-algebra.typ
 
 ### 文档信息
 
-```toml
-[key-you-like]
-    author = "ivaquero"
-    footer = "ivaquero"
-    header = "Reinforcement Learning"
-    lang = "en"
-```
+元信息集中在 `lib/info.toml` 的 `[global]` 段，由 `lib/lib.typ` 统一读取后传入各章，无需在 `.typ` 内硬编码：
 
-使用如下语句读取你的 TOML 文件
+```toml
+[global]
+title = "极简线性代数"
+author = "Yāng Xīnbīn"
+header = "极简线性代数"
+footer = "Yāng Xīnbīn"
+lang = "zh"
+```
 
 ```typst
-#let info = toml("your path").key-you-like
+#let info = toml("info.toml").global
 ```
 
-详情见 [qooklet](https://github.com/ivaquero/typst-qooklet)
+详情见 [qooklet](https://github.com/ivaquero/typst-qooklet)。
 
 ### 章节与交叉引用
 
