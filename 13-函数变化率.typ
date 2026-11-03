@@ -122,7 +122,7 @@ $ lim_(𝒙 → 𝒙_0) frac(f(𝒙) - f(𝒙_0) - 𝑨(𝒙 - 𝒙_0), norm(�
 此时，$f$的变化率为
 
 $
-  𝑱 = mat(delim: "[", pdv(𝑱, x_1), …, pdv(𝑱, x_n)) =
+  𝑱 = mat(delim: "[", pdv(f, x_1), …, pdv(f, x_n)) =
   mat(
     delim: "[",
     pdv(f_1, x_1), …, pdv(f_1, x_n);
@@ -357,11 +357,15 @@ $
 
 = 一点扩展
 
+#note(title: "选读")[
+  本节的散度、旋度以及 Gauss、Stokes 公式属多元微积分内容，是线性代数主线的延伸，供选读，首次阅读可跳过。
+]
+
 == 散度
 
 将梯度中的一元向量函数，替换为多元向量函数，如对二元向量函数则有
 
-$ div arrow(𝒇) = pdv(𝒙, 𝒙) + pdv(𝒚, 𝒚) $
+$ div arrow(𝒇) = pdv(f_1, x) + pdv(f_2, y) $
 
 得到的标量称为散度，表示发散的程度，是物理中通量的局部描述，是通量的体密度。
 
@@ -379,7 +383,7 @@ $
   curl arrow(𝒇) = mat(
     delim: "|",
     𝒊, 𝒋, 𝒌;
-    pdv(, 𝒙), pdv(, 𝒚), pdv(, 𝒛);
+    pdv(, x), pdv(, y), pdv(, z);
     f_1, f_2, f_3
   )
 $
@@ -399,7 +403,7 @@ $
 梯度的散度可以表示为 Nabla 算子的内积
 
 $
-  grad ⋅ grad = grad^⊤grad = sum pdv(arrow(𝒇), x_i^2)
+  grad ⋅ grad = grad^⊤ grad = sum_i pdv(f, x_i, 2)
 $
 
 为了区别 Nabla 算子的外积，通常采用 $laplace = grad ⋅ grad$，称$laplace$为 Laplace 算子。
